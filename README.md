@@ -1,46 +1,121 @@
-# Getting Started with Create React App
+# GAS Genius Apps Solutions Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive website for GAS Genius Apps Solutions built with React, TypeScript, and Express.js.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Modern, animated landing page
+- Detailed services section
+- Contact form with backend integration
+- Admin panel for managing inquiries
+- JWT-based authentication
+- Responsive design for all devices
+- Framer Motion animations
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Frontend
+- React with TypeScript
+- TailwindCSS for styling
+- Framer Motion for animations
+- React Router for navigation
+- Axios for API requests
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Backend
+- Express.js with TypeScript
+- MongoDB with Mongoose
+- JWT for authentication
+- CORS for cross-origin requests
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v14 or higher)
+- MongoDB (local installation or MongoDB Atlas account)
+- npm or yarn package manager
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+\`\`\`bash
+git clone <repository-url>
+cd gas-genius
+\`\`\`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install frontend dependencies:
+\`\`\`bash
+npm install
+\`\`\`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install backend dependencies:
+\`\`\`bash
+cd backend
+npm install
+\`\`\`
 
-### `npm run eject`
+4. Create a .env file in the backend directory with the following variables:
+\`\`\`
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/gas-genius
+JWT_SECRET=your-super-secret-jwt-key-change-in-production
+ADMIN_EMAIL=admin@gasgenius.com
+ADMIN_PASSWORD=admin123
+\`\`\`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Start the backend server:
+\`\`\`bash
+# In the backend directory
+npm run dev
+\`\`\`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. Start the frontend development server:
+\`\`\`bash
+# In the root directory
+npm start
+\`\`\`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The application will be available at http://localhost:3000
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Admin Access
 
-## Learn More
+To access the admin panel:
+1. Navigate to /admin/login
+2. Use the following credentials:
+   - Email: admin@gasgenius.com
+   - Password: admin123
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Building for Production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Build the frontend:
+\`\`\`bash
+# In the root directory
+npm run build
+\`\`\`
+
+2. Build the backend:
+\`\`\`bash
+# In the backend directory
+npm run build
+\`\`\`
+
+## Deployment
+
+### Frontend
+The built frontend files will be in the `build` directory. Deploy these files to your web server or hosting service.
+
+### Backend
+The compiled backend files will be in the `backend/dist` directory. Deploy these files to your server and ensure the following:
+1. Set up environment variables
+2. Configure MongoDB connection
+3. Set up proper security measures (HTTPS, secure headers, etc.)
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
