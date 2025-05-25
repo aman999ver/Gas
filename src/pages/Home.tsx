@@ -5,6 +5,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { config } from '../config';
+import { AppWindowMac, Code, MonitorCog } from "lucide-react";
+import { LucideIcon } from 'lucide-react';
+
 
 interface Project {
   _id: string;
@@ -18,7 +21,7 @@ interface Project {
 interface Feature {
   title: string;
   description: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: LucideIcon;
 }
 
 const ArrowRightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
@@ -46,75 +49,22 @@ const stats = [
   { value: '24/7', label: 'Support' },
 ];
 
-const CustomDevIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    className="w-8 h-8"
-    {...props}
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-    />
-  </svg>
-);
-
-const ModernDesignIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    className="w-8 h-8"
-    {...props}
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-    />
-  </svg>
-);
-
-const PerformanceIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    className="w-8 h-8"
-    {...props}
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M13 10V3L4 14h7v7l9-11h-7z"
-    />
-  </svg>
-);
 
 const features: Feature[] = [
   {
     title: 'Custom Development',
     description: 'Tailored solutions built specifically for your business needs.',
-    icon: CustomDevIcon,
+    icon: Code,
   },
   {
     title: 'Modern Design',
     description: 'Beautiful, responsive interfaces that work on all devices.',
-    icon: ModernDesignIcon,
+    icon: AppWindowMac,
   },
   {
     title: 'Performance First',
     description: 'Optimized applications that load fast and run smoothly.',
-    icon: PerformanceIcon,
+    icon: MonitorCog,
   },
 ];
 
