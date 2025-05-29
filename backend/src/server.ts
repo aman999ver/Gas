@@ -18,7 +18,6 @@ fs.mkdirSync(uploadsDir, { recursive: true });
 
 // Middleware
 app.use(cors({
-  origin: "*",
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
