@@ -18,7 +18,7 @@ fs.mkdirSync(uploadsDir, { recursive: true });
 
 // Middleware
 app.use(cors({
-  origin: 'https://gas-bice.vercel.app/',
+  origin: "*",
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
