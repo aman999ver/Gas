@@ -18,11 +18,15 @@ fs.mkdirSync(uploadsDir, { recursive: true });
 
 // Middleware
 app.use(cors({
+  origin: (origin, callback) => {
+    callback(null, origin || '*'); // Allow any origin
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
   exposedHeaders: ['Content-Range', 'X-Content-Range']
 }));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
