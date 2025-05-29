@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = 'http://localhost:5001';
+const API_URL = 'https://gas-2-rsu0.onrender.com';
 
 interface Inquiry {
   _id: string;
