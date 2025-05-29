@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 console.log('Static files directory:', path.join(__dirname, '../public'));
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/gas-genius')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://geniusappsolu:Wiome3guu7CJCHpi@cluster0.luqgj8q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('✅ Connected to MongoDB'))
   .catch((err) => console.error('❌ MongoDB connection error:', err));
 
